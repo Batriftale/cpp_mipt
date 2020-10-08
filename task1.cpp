@@ -2,9 +2,9 @@
 #include "cmath"
 #include "string"
 
-//#1
-/*bool XOR(int a, int b){
-    if ((!(bool)a) && (!(bool)b){
+#1
+bool XOR(int a, int b){
+    if (((bool)a || (bool)b) && ((bool)a != (bool)b)){
         return true;
     }
     return false;
@@ -16,9 +16,9 @@ int main(){
     std::cout << std::boolalpha;
     std::cout << XOR(a, b);
 return 0;
-}    */
+}    
 
-/*#2
+#2
 float resistance(double r){
     return r * pow(10, 9);
 }
@@ -49,10 +49,10 @@ int main(){
         std::cout << value << " Wb = " << magFlux(value) << " statWb";
     }
     return 0;
-} */
+} 
 
 
-/* #3
+#3
 int main(){
     int x = 9;
     int y = 5;
@@ -65,9 +65,9 @@ int main(){
     std::cout << y << std::endl;
 
     return 0;
-} */
+} 
 
-/* #4
+#4
 int main(){
     double x;
 
@@ -75,14 +75,14 @@ int main(){
     std::cin >> x;
 
     x = sqrt(x);
-    x = pow(x, 2.3);
+    x = pow(x, 6);
     x = floor(x);
     x = sin(x);
     x = ceil(x);
     std::cout << "The result is " << x << std::endl;
 
     return 0;
-} */
+} 
 
 
 int main(){
