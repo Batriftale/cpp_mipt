@@ -22,18 +22,19 @@ return 0;
 float resistance(double r){
     return r * pow(10, 9);
 }
+
 float magFieldStrength(double h, const float pi){
     return 4 * pi * h * pow(10, -3);
 }
+
 float magFlux(double f){
     return f * pow(10, 8);
 }
-int main(){
 
+int main(){
     const float pi = 3.14;
     double value;
     std::string name;
-
 
     std::cout << "What do you want to convert?"<<std::endl;
     std::cin >> name;
@@ -50,7 +51,6 @@ int main(){
     }
     return 0;
 } 
-
 
 #3
 int main(){
@@ -79,12 +79,12 @@ int main(){
     x = floor(x);
     x = sin(x);
     x = ceil(x);
+    
     std::cout << "The result is " << x << std::endl;
-
     return 0;
 } 
 
-
+#5
 int main(){
     double a, b, c, d;
     double first, second;
