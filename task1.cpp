@@ -49,6 +49,9 @@ int main(){
     if (name == "F"){
         std::cout << value << " Wb = " << magFlux(value) << " statWb";
     }
+    else{
+        std::cout << "Incorrect input" << std::endl;   
+    }
     return 0;
 } 
 
@@ -73,12 +76,12 @@ int main(){
 
     std::cout << "Type the value" << std::endl;
     std::cin >> x;
-
+    
+    x = abs(x);
     x = sqrt(x);
     x = pow(x, 6);
     x = floor(x);
     x = sin(x);
-    x = ceil(x);
     
     std::cout << "The result is " << x << std::endl;
     return 0;
@@ -108,6 +111,9 @@ int main(){
     else if ((a == 0) && (b != 0)){
         first = (-1 * c) / b;
         std::cout << first;
+    }
+    else{
+        std::cout << "No solution" << std::endl;    
     }
 return 0;
 }
