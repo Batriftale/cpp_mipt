@@ -13,8 +13,8 @@ void insertionSort(int *arr, int n){
             }
     }
 }
-
-/*int main(){
+#1
+int main(){
     int arr[7] = {56, 1, 343, 34, 2, 6, 6};
     int n = 7;
 
@@ -24,9 +24,9 @@ void insertionSort(int *arr, int n){
         std::cout << arr[i] << std::endl;
     }
     return 0;
-}   */
+}   
 
-/*
+#2
 int main(){
     int arr[10];
     int key;
@@ -68,8 +68,9 @@ int main(){
 
 
     return 0;
-} */
+} 
 
+#3
 int main(){
     std::string a;
     std::string b;
