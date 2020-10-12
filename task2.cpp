@@ -114,5 +114,39 @@ int main(){
         std::cout << res;
         return 0;
         }
+#4
+int main(){
+	string x, y, x_l, x_r, y_l, y_r;
+	cout << "Type two numbers" << endl;
+	cin >> x >> y;
+	int n, i1, i2, j1, j2, prod1, prod2, prod3, result;
+	n = x.length();
+	if (n == 1){
+		i1 = atoi(x.c_str());
+		j1 = atoi(y.c_str());
+		result = i1 * j1;
+		cout << result;
+	}
+	else {
+
+	x_l = x.substr(0, n/2);
+	x_r = x.substr(n/2, n);
+	y_l = y.substr(0, n/2);
+	y_r = y.substr(n/2, n);
+
+	i1 = atoi(x_l.c_str());
+	i2 = atoi(x_r.c_str());
+	j1 = atoi(y_l.c_str());
+	j2 = atoi(y_r.c_str());
+
+	prod1 = i1*j1;
+	prod2 = i2*j2;
+	prod3 = (i1 + i2)*(j1+j2);
+
+	result = prod1 * pow(10, ((n/2)*2)) + (prod3 - prod1 - prod2) * pow(10, (n/2)) + prod2;
+	cout << result;
+	}
+    return 0;
+}
 
 
