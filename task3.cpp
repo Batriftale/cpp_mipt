@@ -1,8 +1,8 @@
 #include "iostream"
 
 using namespace std;
-
-/*long long factorial(int n){
+/#1
+long long factorial(int n){
     if (n < 0)
         return 0;
     else if (n == 1)
@@ -12,12 +12,12 @@ using namespace std;
 
 int main(){
     int n;
-    cout << "Введите число" << endl;
+    cout << "Type n" << endl;
     cin >> n;
-    cout << " Факториал числа " << n << " " << factorial(n) << endl;;\
-
+    cout << "Factorial of " << n << " is " << factorial(n) << endl;
     return 0;
-} */
+}
+/#2
 void Merge(int *A, int first, int mid, int last){
     int j;
     int *buf = new int[100];
@@ -73,6 +73,8 @@ int main(){
     }
     delete []A;
 }
+/#3
+
 
 
 
