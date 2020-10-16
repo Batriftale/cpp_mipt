@@ -82,6 +82,9 @@ class Group{
             }
             return (summ / lst.size());
         }
+        ~Group(){
+            lst.clear();
+        }
 
 };
 int main(){
