@@ -92,15 +92,17 @@ int main(){
     cout << "Number of students is" << endl;
     cin >> n;
     cout << "Type students' names and their scores" << endl;
+    Group g;
     for(int i = 0; i < n; i++){
-        getline(cin, name);
+        string fname, lname;
+        cin >> fname >> lname;
+        string name = fname + " " + lname;
         cin >> score;
         Stud student = {name, score};
         Student s(student);
-        Group g;
         g.add(student);
     }
-    Group g;
-    cout << g.avarageScore << endl;
+    cout << g.avarageScore() << endl;
 }
+
 
