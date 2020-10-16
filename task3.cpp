@@ -1,4 +1,6 @@
 #include "iostream"
+#include "vector"
+#include "algorithm"
 
 using namespace std;
 /#1
@@ -74,6 +76,42 @@ int main(){
     delete []A;
 }
 /#3
+int main(){
+    const char type;
+    vector<int> vec;
+    int elem;
+    
+    cout << "Type elements of the vector and 0 as a terminator"<< endl;
+    while (elem != 0){
+        cin << elem;
+        vec.push_back(elem);
+    }
+    cout <<" How do you want to sort it? << endl;
+    cin << type;
+    
+    auto comp = [type](int a, int b){
+        switch(type){
+            case 1:
+            return a < b;
+
+            case 2:
+            return a > b;
+
+            case 3:
+            return a >= b;
+
+            case 4:
+            return a <= b;
+        }
+    };
+
+    sort(vec.begin(), vec.end(), comp);
+
+    for(int i = 0; i < vec.size(); i++){
+        cout << vec[i] << " ";
+    }
+
+}
 
 
 
