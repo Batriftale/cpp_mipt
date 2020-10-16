@@ -54,3 +54,53 @@ int main(){
     prod.summ();
 
 }
+№3
+struct Stud{
+    string name;
+    double avscore;
+};
+
+class Student{
+    private:
+        Stud m_student;
+    public:
+        Student(Stud stud){
+            m_student = stud;
+        }
+};
+class Group{
+    public:
+        vector<Stud> lst;
+        void add(Stud student){
+            lst.push_back(student);
+        };
+        double avarageScore(){
+            double summ = 0;
+
+            for(int i = 0; i < lst.size(); i++){
+                summ += lst[i].avscore;
+            }
+            return (summ / lst.size());
+        }
+
+};
+int main(){
+    int n;
+    string name;
+    double score;
+
+    cout << "Number of students is" << endl;
+    cin >> n;
+    cout << "Type students' names and their scores" << endl;
+    for(int i = 0; i < n; i++){
+        getline(cin, name);
+        cin >> score;
+        Stud student = {name, score};
+        Student s(student);
+        Group g;
+        g.add(student);
+    }
+    Group g;
+    cout << g.avarageScore << endl;
+}
+
