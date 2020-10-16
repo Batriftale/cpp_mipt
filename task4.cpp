@@ -55,30 +55,27 @@ int main(){
 
 }
 №3
-struct Stud{
-    string name;
-    double avscore;
-};
-
 class Student{
     private:
-        Stud m_student;
+        string  m_name;
+        double m_avscore;
     public:
-        Student(Stud stud){
-            m_student = stud;
+        Student(string name, double avscore){
+            m_name = name;
+            m_avscore = avscore;
         }
 };
 class Group{
     public:
-        vector<Stud> lst;
-        void add(Stud student){
-            lst.push_back(student);
+        vector< pair<string, double> > lst;
+        void add(string name, double avscore){
+            lst.push_back(make_pair(name, avscore));
         };
         double avarageScore(){
             double summ = 0;
 
             for(int i = 0; i < lst.size(); i++){
-                summ += lst[i].avscore;
+                summ += lst[i].second;
             }
             return (summ / lst.size());
         }
@@ -101,9 +98,8 @@ int main(){
         cin >> fname >> lname;
         string name = fname + " " + lname;
         cin >> score;
-        Stud student = {name, score};
-        Student s(student);
-        g.add(student);
+        Student s(name, score);
+        g.add(name, score);
     }
     cout << g.avarageScore() << endl;
 }
