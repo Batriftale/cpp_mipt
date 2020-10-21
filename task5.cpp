@@ -112,6 +112,40 @@ int main(){
     ComplexNum comnum_mul = comnum1 * comnum2;
 
 }
+#3
+class ComplexNum{
+    private:
+        int re, im;
+    public:
+        ComplexNum(int r = 0, int i =0)
+        {  re = r;   im = i; }
+        friend ostream & operator << (ostream &out, const ComplexNum &c);
+        friend istream & operator >> (istream &in,  ComplexNum &c);
+    };
+
+ostream & operator << (ostream &out, const ComplexNum &c){
+    out << c.re;
+    out << " +i" << c.im << endl;
+    return out;
+}
+
+istream & operator >> (istream &in,  ComplexNum &c){
+    cout << "Enter Real Part ";
+    in >> c.re;
+    cout << "Enter Imaginary Part ";
+    in >> c.im;
+    return in;
+}
+
+int main(){
+   ComplexNum c1;
+   ComplexNum c2;
+   cin >> c1;
+   cin >> c2;
+   cout << c1;
+   cout << c2;
+   return 0;
+}
 
 #4
 int main(){
