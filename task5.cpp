@@ -122,31 +122,29 @@ int main(){
 }
 
 #4
-int main(){
-    fstream iofile("task5_data.txt" , ios::in | ios::out);
-
-    float res = 0;
-    float ims = 0;
-    vector<float> values;
-
-    while (iofile){
-        string strInput;
-        float tmp;
-
-        getline(iofile, strInput);
-        istringstream ist(strInput);
-
-        while (ist >> tmp){
-            values.push_back(tmp);
+int main()
+{
+    std::ifstream infile("task5_data.txt");
+    float a, b;
+    int i = 0;
+    vector <ComplexNum> c;
+        while (infile >> a >> b)
+        {
+            ComplexNum z(a, b);
+            c.push_back(z);
+            i++;
         }
+    infile.close();
+    ComplexNum r = c[0] + c[1];
 
+    std::ofstream outfile;
+    outfile.open("task5_data.txt", std::ios_base::app);
+    if(outfile.is_open())
+    {
+        outfile << endl;
+        outfile << r << endl;
     }
-
-    res = static_cast<float>(values[0]) + static_cast<float>(values[2]);
-    ims = static_cast<float>(values[2]) + static_cast<float>(values[3]);
-    iofile.put(res);
-    iofile.put('  ');
-    iofile.put(ims);
+    outfile.close();
 }
 
 
