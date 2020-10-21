@@ -39,59 +39,33 @@ class ComplexNum{
             m_im = im;
         }
        friend ComplexNum operator+(const ComplexNum &d1, const ComplexNum &d2){
-            float re_s, im_s;
-            stringstream myString;
-
-            re_s = d1.m_re + d2.m_re;
-            im_s = d1.m_im + d2.m_im;
-
-            myString << re_s << " " << im_s;
-
-            string str_re, str_im;
-            myString >> str_re >> str_im;
-            cout << str_re << " + " << str_im << "i" << endl;;
+           ComplexNum C(d1.m_re + d2.m_re, d1.m_im + d2.m_im);
+           return C;
         };
     
         friend ComplexNum operator-(const ComplexNum &d1, const ComplexNum &d2){
-            float re_s, im_s;
-            stringstream myString;
-
-            re_s = d1.m_re - d2.m_re;
-            im_s = d1.m_im - d2.m_im;
-
-            myString << re_s << " " << im_s;
-
-            string str_re, str_im;
-            myString >> str_re >> str_im;
-            cout << str_re << " + " << str_im << "i" << endl;
+            ComplexNum C(d1.m_re - d2.m_re, d1.m_im - d2.m_im);
+           return C;
         };
     
         friend ComplexNum operator/(const ComplexNum &d1, const ComplexNum &d2){
             float re_s, im_s;
-            stringstream myString;
 
             re_s = (d1.m_re * d2.m_re + d1.m_im * d2.m_im) / (pow(d2.m_re, 2) + pow(d2.m_im, 2));
             im_s = (d2.m_re * d1.m_im - d1.m_re * d2.m_im) / (pow(d2.m_re, 2) + pow(d2.m_im, 2));
 
-            myString << re_s << " " << im_s;
-
-            string str_re, str_im;
-            myString >> str_re >> str_im;
-            cout << str_re << " + " << str_im << "i" << endl;
+            ComplexNum C(re_s, im_s);
+            return C;
         };
     
         friend ComplexNum operator*(const ComplexNum &d1, const ComplexNum &d2){
             float re_s, im_s;
-            stringstream myString;
-
+            
             re_s = d1.m_re * d2.m_re - d1.m_im * d2.m_im;
             im_s = d1.m_re * d2.m_im + d2.m_re * d1.m_im;
 
-            myString << re_s << " " << im_s;
-
-            string str_re, str_im;
-            myString >> str_re >> str_im;
-            cout << str_re << " + " << str_im << "i" << endl;
+            ComplexNum C(re_s, im_s);
+            return C;
         };
 
 };
