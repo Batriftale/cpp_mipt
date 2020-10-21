@@ -5,7 +5,7 @@
 
 
 using namespace std;
-/*
+#1
 class ComplexNum{
     private:
         float m_re;
@@ -26,8 +26,8 @@ int main(){
 
     ComplexNum comp(re,im);
     cout << comp.complexMod() << endl;
-} */
-
+} 
+#2
 class ComplexNum{
     private:
         float m_re;
@@ -50,6 +50,7 @@ class ComplexNum{
             myString >> str_re >> str_im;
             cout << str_re << " + " << str_im << "i" << endl;;
         };
+    
         friend ComplexNum operator-(const ComplexNum &d1, const ComplexNum &d2){
             float re_s, im_s;
             stringstream myString;
@@ -63,6 +64,7 @@ class ComplexNum{
             myString >> str_re >> str_im;
             cout << str_re << " + " << str_im << "i" << endl;
         };
+    
         friend ComplexNum operator/(const ComplexNum &d1, const ComplexNum &d2){
             float re_s, im_s;
             stringstream myString;
@@ -76,6 +78,7 @@ class ComplexNum{
             myString >> str_re >> str_im;
             cout << str_re << " + " << str_im << "i" << endl;
         };
+    
         friend ComplexNum operator*(const ComplexNum &d1, const ComplexNum &d2){
             float re_s, im_s;
             stringstream myString;
