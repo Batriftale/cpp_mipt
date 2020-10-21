@@ -112,4 +112,33 @@ int main(){
 
 }
 
+#4
+int main(){
+    fstream iofile("task5_data.txt" , ios::in | ios::out);
+
+    float res = 0;
+    float ims = 0;
+    vector<float> values;
+
+    while (iofile){
+        string strInput;
+        float tmp;
+
+        getline(iofile, strInput);
+        istringstream ist(strInput);
+
+        while (ist >> tmp){
+            values.push_back(tmp);
+        }
+
+    }
+
+    res = static_cast<float>(values[0]) + static_cast<float>(values[2]);
+    ims = static_cast<float>(values[2]) + static_cast<float>(values[3]);
+    iofile.put(res);
+    iofile.put('  ');
+    iofile.put(ims);
+}
+
+
 
