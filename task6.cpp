@@ -12,7 +12,6 @@ double getRandomNumber(double minimum, double maximum)
     double randMinMax = randInterval + minimum;
     return randMinMax;
 }
-/*
 int main()
 {
     srand(static_cast<unsigned int>(time(0)));
@@ -34,7 +33,6 @@ int main()
     }
     cout << "pi is ~ " <<  4 * (double)n/(double)N;
     }
-*/
 
 class ArrayInt
 {
