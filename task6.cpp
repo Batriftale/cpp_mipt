@@ -4,7 +4,7 @@
 #include "ctime"
 
 using namespace std;
-
+№1
 double getRandomNumber(double minimum, double maximum)
 {
     double randZeroOne = rand()/static_cast<double>(RAND_MAX);
@@ -33,7 +33,7 @@ int main()
     }
     cout << "pi is ~ " <<  4 * (double)n/(double)N;
     }
-
+№2
 class ArrayInt
 {
     private:
