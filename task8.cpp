@@ -4,8 +4,8 @@
 #include "string"
 
 using namespace std;
-
-/*long long factorial(int n){
+â„–1
+long long factorial(int n){
     if (n < 0)
         throw "n can't be negative";
     else if (n == 1)
@@ -15,11 +15,11 @@ using namespace std;
 
 int main(){
     int n;
-    cout << "Ââåäèòå ÷èñëî" << endl;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
     cin >> n;
     try
     {
-    cout << " Ôàêòîðèàë ÷èñëà " << n << " " << factorial(n) << endl;
+    cout << " Ð¤Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ñ‡Ð¸ÑÐ»Ð°" << n << " " << factorial(n) << endl;
     }
     catch(const char* exception)
     {
@@ -28,13 +28,13 @@ int main(){
     }
 
     return 0;
-} */
-
+}
+â„–2
 int main()
 {
     try
     {
-        ifstream file("task5_data.txt");
+        ifstream file("nofile.txt");
         if (!file)
             throw "No such file";
         else
@@ -47,9 +47,9 @@ int main()
         }
         }
     }
-    catch (const std::ios_base::failure& e)
+    catch (const char* exception)
     {
-    cerr << "Error occurred opening file" << endl;
+    cerr << "Error: " << exception << endl;
     }
 }
 
