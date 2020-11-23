@@ -4,8 +4,9 @@
 
 using namespace std;
 
-/*template <class T>
-class ComplexNum{
+template <class T>
+class ComplexNum
+{
     private:
         T re;
         T im;
@@ -14,7 +15,7 @@ class ComplexNum{
         {  re = r;   im = i; }
         friend ostream & operator << (ostream &out, const ComplexNum &c);
         friend istream & operator >> (istream &in,  ComplexNum &c);
-    };  */
+};  
 
 template <typename T>
 class Queue
