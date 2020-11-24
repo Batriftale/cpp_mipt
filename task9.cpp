@@ -73,9 +73,6 @@ void Queue<T>::printQueue()
         cout << "|" << "    " << queuePtr[ix] << endl;
 }
 
-
-
-
 template<>
 bool Queue<string>::push_bck(const string *value)
 {
@@ -86,4 +83,18 @@ bool Queue<string>::push_bck(const string *value)
     if (end > size)
         end -= size + 1;
     return true;
+}
+
+int main()
+{
+    Queue<int> myQueue(3);
+    int ecount = 0;
+    while(ecount++ != 3)
+    {
+        int temp;
+        cin >> temp;
+        myQueue.push_bck(temp);
+    }
+    myQueue.printQueue();
+    myQueue.pop_frnt();
 }
