@@ -1,7 +1,13 @@
-#include <iostream>
+#include "cmath"
+#include "iostream"
+#include <utility>
+#include "string"
+#include "sstream"
+
 using namespace std;
 
-/*template <typename... T>
+№1
+template <typename... T>
 auto memSum(T... s)
 {
     return(... +sizeof(s));
@@ -13,39 +19,19 @@ int main()
     return 0;
 }
 
-struct Item
-{
-    int a, b, c;
-    Item(int a, int b, int c): a(a), b(b), c(c){}
-};
-
-template <typename T>
-int create(T it)
-{
-    T *res = new T;
-    return res;
-}
-
-int main()
-{
-    Item it{1, 2, 3};
-    int b = ::create<Item>(it);
-    cout << b;
-}         */
-
-#include "cmath"
-#include "iostream"
-#include <utility>
-#include "string"
-#include "sstream"
-
-using namespace std;
+№4
 template <typename T>
 class Figure
 {
     public:
-        double perimeter();
-        double area();
+        double n_perimeter()
+        {
+            self()->perimeter()
+        };
+        double n_area()
+        {
+            self()->area()
+        };
         ostream& print (ostream &out) {return out;}
         friend ostream& operator<< (ostream &out, Figure &f)
             {
@@ -133,60 +119,4 @@ class Polygon: public Figure<Polygon>
         }
 
 };
-/*class Circle: public Ellipse
-{
-    private:
-             double m_rad;
-    public:
-        Circle(double rad) :Ellipse(rad, rad){m_rad = rad;};
-        virtual double area()
-        {
-            return Ellipse::area();
-        }
-        virtual double perimeter()
-        {
-            return Ellipse::perimeter();
-        }
-        virtual ostream& print(ostream& out)
-        {
-            out << "Circle, ";
-            out << "Radius " << m_rad << ", ";
-            out << "perimeter " << perimeter() << ", ";
-            out << "area " << area() << endl;
-            return out;
-        }
-        friend ostream& operator<< (ostream &out, Circle &c)
-        {
-            c.print(out);
-            return out;
-        }
-};
-class Triangle: public Polygon
-{
-    public:
-        Triangle(int numVertices, string pointsStr)
-        :Polygon(numVertices, pointsStr)
-        {}
-        virtual double area()
-        {
-            return Polygon::area();
-        }
-        virtual double perimeter()
-        {
-            return Polygon::perimeter();
-        }
-        virtual ostream& print(ostream& out)
-        {
-            out << "Triangle, ";
-            out << "perimeter " << perimeter() << ", ";
-            out << "area " << area() << endl;
-        }
-        friend ostream& operator<< (ostream &out, Triangle &t)
-        {
-            t.print(out);
-            return out;
-        }
-};*/
 
-int main()
-{
