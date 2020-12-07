@@ -18,6 +18,33 @@ int main()
     cout << memSum(1, "Hi", 2) <<endl;
     return 0;
 }
+№2
+template<typename T>
+auto pointer(T arg)
+{
+T *ptr = new T(arg);
+return(ptr);
+}
+
+template<typename T, typename... Types>
+auto pointer(T first, Types... args)
+{
+pointer(first);
+pointer(args...);
+}
+
+int main()
+{
+cout << pointer("hello") << endl;
+}
+
+№3
+template<typename T, typename... Type>
+auto lms(T (*func)(Type...), Type... args)
+{
+return func(args...);
+}
+
 
 №4
 template <typename T>
